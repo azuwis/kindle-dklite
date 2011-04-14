@@ -26,3 +26,4 @@ do
 done
 
 cp startdk.sh $dklitefolder/DK_System/
+cp stopdk.sh $dklitefolder/DK_System/
