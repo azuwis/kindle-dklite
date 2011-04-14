@@ -1,0 +1,7 @@
+* jailbreak your kindle http://www.mobileread.com/forums/showthread.php?t=88004
+* install launchpad http://www.mobileread.com/forums/showthread.php?t=97636
+* download duokan from http://www.duokan.com/, unpack and get a folder that contains DK_System, eg. rtm/
+* run `./gen_dklite.sh rtm/ dklite/ xdg', in which, rtm/ is the folder that contains DK_System, dklite/ is the folder we save files to, xdg is your kindle model(see folders in rtm/DK_System/DK_Update/)
+* copy all folders in dklite/ to kindle:/
+* copy duokan.ini to kindle:/launchpad/, and reload launchpad by pressing `Shift Shift Space'
+* launchpad duokan by pressing `Shift D S', exit it by pressing `Shift D X'
