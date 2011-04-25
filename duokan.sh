@@ -17,27 +17,25 @@ stop_duokan() {
     dk_pid=$(pidof ebook)
     if [ x"$dk_pid" != x ]; then
         killtree ${dk_pid}
-    fi
-    if [ x"$dk_pid" != x ]; then
         kill -TERM $pids
     fi
 }
 
-start_kindle() {
-    /etc/init.d/framework start
-}
-
 case "$1" in
 start)
+    /etc/init.d/framework stop
+    if [ -n "`pidof ebook`" ]; then
+        stop_duokan
+    fi
     start_duokan
     ;;
 stop)
     stop_duokan
-    start_kindle
-    ;;
-restart)
-    stop_duokan
-    start_duokan
+    if [ -n "`pidof cvm`" ]; then
+        /etc/init.d/framework restart
+    else
+        /etc/init.d/framework start
+    fi
     ;;
 *)
     ;;
