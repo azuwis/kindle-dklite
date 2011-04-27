@@ -11,19 +11,18 @@ done
 
 for i in lib system Savers
 do
-	cp -r $dkfolder/DK_System/$i $dklitefolder/DK_System/
+	cp -r "$dkfolder/DK_System/$i" $dklitefolder/DK_System/
 done
 
 mkdir -p $dklitefolder/DK_System/bin
 for i in DKPrivateProfile doc2html ebook
 do
-	cp $dkfolder/DK_System/bin/$i $dklitefolder/DK_System/bin/
+	cp "$dkfolder/DK_System/bin/$i" $dklitefolder/DK_System/bin/
 done
 
 for i in Savers system config.ini
 do
-	cp -r $dkfolder/DK_System/DK_Update/$model/DK_System/$i $dklitefolder/DK_System/
+	cp -r "$dkfolder/DK_System/DK_Update/$model/DK_System/$i" $dklitefolder/DK_System/
 done
 
-cp startdk.sh $dklitefolder/DK_System/
-cp stopdk.sh $dklitefolder/DK_System/
+cp duokan.sh $dklitefolder/DK_System/
