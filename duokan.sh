@@ -8,12 +8,15 @@ killtree() {
 }
 
 start_duokan() {
-    export LD_LIBRARY_PATH=/mnt/us/DK_System/lib/:${LD_LIBRARY_PATH}
-    chmod a+x /mnt/us/DK_System/bin/ebook
-    /mnt/us/DK_System/bin/ebook >/dev/null 2>/dev/null &
+    /mnt/us/DK_System/bin/lcrun /mnt/us/DK_System/bin/ebook >/dev/null 2>/dev/null &
 }
 
 stop_duokan() {
+	killall ebook
+	killall lipc-wait-event
+}
+
+stop_duokan_nice() {
     dk_pid=$(pidof ebook)
     if [ x"$dk_pid" != x ]; then
         killtree ${dk_pid}

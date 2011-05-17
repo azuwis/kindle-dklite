@@ -15,7 +15,7 @@ do
 done
 
 mkdir -p $dklitefolder/DK_System/bin
-for i in DKPrivateProfile doc2html ebook
+for i in DKPrivateProfile doc2html ebook lcrun getusbevent.sh
 do
 	cp "$dkfolder/DK_System/bin/$i" $dklitefolder/DK_System/bin/
 done
